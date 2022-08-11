@@ -34,10 +34,13 @@ export default createUnplugin<Options>((options = {}) => {
     enforce: "pre",
 
     transformInclude(id) {
-      return filter(id);
+  
+       return filter(id);
     },
 
     transform(code, id) {
+      console.log(code);
+      
       try {
         const s = transform(code, id, opt.params);
         if (!s) return;

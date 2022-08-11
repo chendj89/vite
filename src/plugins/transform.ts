@@ -81,6 +81,6 @@ export default /*#__PURE__*/ DO_defineComponent(${argText});
   // console.log(s.toString());
 
   let t1=s.remove(startOffset + node.start!, startOffset + node.end!);
-  // console.log(s.toString());
+  console.log(s.toString());
   return s;
 };
