@@ -5,3 +5,5 @@
 export default function useImport(name?: string) {
   console.log(name + "🤡");
 }
+
+export function useName(){}

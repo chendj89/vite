@@ -42,7 +42,9 @@ export default createUnplugin<Options>((options = {}) => {
         const s = transform(code, id, opt.params);
         if (!s) return;
         return {
+          // 对象转字符串
           code: s.toString(),
+          // map
           get map() {
             return s.generateMap();
           },

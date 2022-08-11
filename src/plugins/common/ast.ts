@@ -9,6 +9,12 @@ export const parseSFC = (code: string, id: string): SFCDescriptor => {
   return descriptor;
 };
 
+/**
+ * 判断是否有defineOptions
+ * @param node 
+ * @param test 
+ * @returns boolean
+ */
 export function isCallOf(
   node: Node | null | undefined,
   test: string | ((id: string) => boolean)
@@ -28,8 +34,12 @@ export function checkInvalidScopeReference(
   method: string,
   scriptSetup: SFCScriptBlock
 ) {
-  if (!node) return;
+
+  if (!node) {
+    return
+  };
   walkIdentifiers(node, (id) => {
+    
     if (
       Object.keys(scriptSetup.bindings!).includes(id.name) &&
       !Object.keys(scriptSetup.imports!).includes(id.name)
