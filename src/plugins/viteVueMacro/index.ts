@@ -60,7 +60,6 @@ function transform(code: string, id: string, params?: any) {
       tpl.push(value);
     }
   }
-  console.log(tpl);
   if (!tpl.length) {
     return;
   }

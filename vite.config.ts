@@ -15,6 +15,7 @@ export default defineConfig({
     vue(),
     viteVueMacro({
       useImport: `import useImport from "@/utils/useImport";`,
+      useDialog: `import useDialog from "@/utils/useDialog";`,
     }),
   ],
 });
