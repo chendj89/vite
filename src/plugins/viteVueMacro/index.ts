@@ -1,42 +1,5 @@
 import { createUnplugin } from "unplugin";
-import {
-  MagicString,
-  compileScript,
-  parse,
-  walkIdentifiers,
-} from "@vue/compiler-sfc";
-import type { SFCDescriptor, SFCScriptBlock } from "@vue/compiler-sfc";
-import type { CallExpression, Node, ObjectExpression } from "@babel/types";
-export const unplugin = createUnplugin((options: any) => {
-  return {
-    name: "viteVueMacro",
-    enforce: "pre",
-    transformInclude(id) {
-      return id.endsWith(".vue");
-    },
-    transform(code, id) {
-      try {
-        const s = transform(code, id, options);
-        if (!s) {
-          return;
-        }
-        return {
-          code: s.toString(),
-          get map() {
-            return s.generateMap();
-          },
-        };
-      } catch (error) {
-        this.error(`viteVueMacro发生错误：${error}`);
-      }
-    },
-  };
-});
-
-export const viteVueMacro = unplugin.vite;
-export const rollupVueMacro = unplugin.rollup;
-export const webpackVueMacro = unplugin.webpack;
-export const esbuildVueMacro = unplugin.esbuild;
+import { MagicString, compileScript, parse } from "@vue/compiler-sfc";
 
 /**
  * 转换为sfc模式
@@ -92,3 +55,36 @@ ${tpl.join(";\n")}
 </script>\n`);
   return s;
 }
+
+export const unplugin = createUnplugin((options: Record<string, string>) => {
+  return {
+    name: "viteVueMacro",
+    enforce: "pre",
+    transformInclude(id) {
+      return id.endsWith(".vue");
+    },
+    transform(code, id) {
+      try {
+        const s = transform(code, id, options);
+        if (!s) {
+          return;
+        }
+        return {
+          code: s.toString(),
+          get map() {
+            return s.generateMap();
+          },
+        };
+      } catch (error) {
+        this.error(`viteVueMacro发生错误：${error}`);
+      }
+    },
+  };
+});
+/**
+ * 定义宏
+ */
+export const viteVueMacro = unplugin.vite;
+export const rollupVueMacro = unplugin.rollup;
+export const webpackVueMacro = unplugin.webpack;
+export const esbuildVueMacro = unplugin.esbuild;
