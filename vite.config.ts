@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
-import m1 from "./src/plugins/vite";
+import { viteVueMacro } from "./src/plugins/viteVueMacro";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,10 +13,8 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    m1({
-      params: {
-        useImport: `import useImport from "@/utils/useImport.ts";`,
-      },
+    viteVueMacro({
+      useImport: `import useImport from "@/utils/useImport";`,
     }),
   ],
 });

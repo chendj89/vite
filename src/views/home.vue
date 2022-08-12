@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import { reactive } from "vue";
-import { useRoute } from "vue-router";
-const route=useRoute();
-console.log(route.meta);
-
-const meta = reactive({
-  title: "标题",
-});
-
+useImport("22");
 </script>
 <template>
   <div>123</div>

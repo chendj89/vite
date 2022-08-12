@@ -9,4 +9,3 @@ declare global {
    */
   function useImport(name?: string): void;
 }
-export function useName() {}
