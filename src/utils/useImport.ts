@@ -1,9 +1,12 @@
-/**
- * 导入小丑
- * @param name
- */
 export default function useImport(name?: string) {
   console.log(name + "🤡");
 }
 
-export function useName(){}
+declare global {
+  /**
+   * 导入小丑00
+   * @param name
+   */
+  function useImport(name?: string): void;
+}
+export function useName() {}
