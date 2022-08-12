@@ -56,7 +56,7 @@ ${tpl.join(";\n")}
   return s;
 }
 
-export const unplugin = createUnplugin((options: Record<string, string>) => {
+export const unplugin = createUnplugin((options?: Record<string, string>) => {
   return {
     name: "viteVueMacro",
     enforce: "pre",

@@ -18,9 +18,13 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
-router.beforeEach((to,form)=>{
+router.addRoute({
+  path: "/about",
+  name: "about",
+  component: () => import("@/views/about.vue"),
+});
+router.beforeEach((to, form) => {
   console.log(to);
-  
-})
+});
 
 export default router;

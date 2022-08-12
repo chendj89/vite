@@ -1,11 +1,19 @@
-export default function useDialog(file?: string) {
-  console.log(file + "👻");
+import type { DefineComponent } from "vue";
+type Component = DefineComponent<{}, {}, any>;
+// type File<T extends string> = `${T}.vue`;
+export default function useDialog(file: Component, opts?: any) {
+  console.log(file);
+  console.log("👻");
+  return new Promise((resolve) => {
+    return resolve(true);
+  });
 }
 
 declare global {
   /**
    * 使用对话框
    * @param file
+   * @param {Object} opts
    */
-  function useDialog(file?: string): void;
+  function useDialog(file: Component, opts?: any): Promise<any>;
 }

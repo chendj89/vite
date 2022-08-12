@@ -1,9 +1,9 @@
 <script setup lang="ts">
 useImport("22");
-
-useDialog("000");
 </script>
 <template>
-  <div>123</div>
+  <div>
+    <router-link :to="{ name: 'about' }">about</router-link>
+  </div>
 </template>
 <style lang="scss" scoped></style>
