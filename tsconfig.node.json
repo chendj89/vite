@@ -9,6 +9,6 @@
     "vite.config.ts",
     "./src/utils/useImport.ts",
     "./src/utils/type.ts",
-    "./src/plugins/vite"
+    "./src/plugins/vite.ts",
   ]
 }

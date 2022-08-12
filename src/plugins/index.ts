@@ -26,6 +26,7 @@ function resolveOption(options: Options): OptionsResolved {
 
 export default createUnplugin<Options>((options = {}) => {
   const opt = resolveOption(options);
+  // 优化检索，优化性能
   const filter = createFilter(opt.include, opt.exclude);
 
   const name = "unplugin-vue-define-options";
@@ -39,11 +40,11 @@ export default createUnplugin<Options>((options = {}) => {
     },
 
     transform(code, id) {
-      console.log(code);
       
       try {
+        // 转换代码
         const s = transform(code, id, opt.params);
-        if (!s) return;
+        if (!s) return ;
         return {
           // 对象转字符串
           code: s.toString(),
