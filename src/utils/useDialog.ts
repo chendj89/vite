@@ -1,5 +1,4 @@
-import type { DefineComponent } from "vue";
-type Component = DefineComponent<{}, {}, any>;
+import { Component } from "@/types";
 // type File<T extends string> = `${T}.vue`;
 export default function useDialog(file: Component, opts?: any) {
   console.log(file);

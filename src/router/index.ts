@@ -23,6 +23,11 @@ router.addRoute({
   name: "about",
   component: () => import("@/views/about.vue"),
 });
+router.addRoute({
+  path: "/menu",
+  name: "menu",
+  component: () => import("@/views/menu.vue"),
+});
 router.beforeEach((to, form) => {
   console.log(to);
 });

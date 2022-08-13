@@ -4,6 +4,7 @@ useImport("22");
 <template>
   <div>
     <router-link :to="{ name: 'about' }">about</router-link>
+    <router-link :to="{ name: 'menu' }">menu</router-link>
   </div>
 </template>
 <style lang="scss" scoped></style>

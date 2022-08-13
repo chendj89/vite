@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import updateName from "@/content/updateName.vue";
+import updateName from "@/dialog/updateName.vue";
 import { log } from "console";
-
-useDialog(updateName).then((res) => {
+console.log(1);
+await useDialog(updateName).then((res) => {
   console.log(res);
 });
+console.log(2);
 </script>
 <template>
   <div class="about">434</div>
