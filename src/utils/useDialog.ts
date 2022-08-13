@@ -1,8 +1,6 @@
 import { Component } from "@/types";
 // type File<T extends string> = `${T}.vue`;
 export default function useDialog(file: Component, opts?: any) {
-  console.log(file);
-  console.log("👻");
   return new Promise((resolve) => {
     return resolve(true);
   });

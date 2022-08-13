@@ -28,8 +28,6 @@ router.addRoute({
   name: "menu",
   component: () => import("@/views/menu.vue"),
 });
-router.beforeEach((to, form) => {
-  console.log(to);
-});
+router.beforeEach((to, form) => {});
 
 export default router;

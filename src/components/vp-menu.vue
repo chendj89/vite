@@ -1,10 +1,3 @@
-<template>
-  <div>
-    <div>vp-btn</div>
-    <div>属性：{{ props.msg }}</div>
-  </div>
-</template>
-
 <script setup lang="ts">
 const props = defineProps({
   msg: {
@@ -13,5 +6,10 @@ const props = defineProps({
   },
 });
 </script>
-
+<template>
+  <div>
+    <div>vp-menu</div>
+    <div>{{ props.msg }}</div>
+  </div>
+</template>
 <style scoped></style>
