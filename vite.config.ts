@@ -15,6 +15,16 @@ export default defineConfig({
       "@": path.join(__dirname, "src"),
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+        @use "@/scss/var.module.scss" as *;
+        @use "@/scss/mixin.scss" as *;
+        `,
+      },
+    },
+  },
   plugins: [
     vue(),
     viteVueMacro({

@@ -46,7 +46,7 @@ const reloadFun = () => {
 
 <template>
   <Suspense>
-    <div>
+    <div class="home">
       <el-tabs type="card" @tab-click="tabClick" :closable="true">
         <el-tab-pane
           v-for="item in state.routes"
@@ -71,4 +71,7 @@ const reloadFun = () => {
   </Suspense>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.home {
+}
+</style>
