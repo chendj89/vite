@@ -9,8 +9,7 @@ import vpMenu from "@/components/vp-menu.vue";
 import ElementPlus from "element-plus";
 import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 
-import scss from "@/scss/a.module.scss";
-console.log(scss.theme);
+import scss from "@/scss/alias.module.scss";
 
 const app = createApp(App);
 app.use(ElementPlus, { size: "small" });
@@ -19,6 +18,7 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 useInstall(app, vpBtn, {
   msg: "👻👻👻👻",
+  ...scss,
 });
 useInstall(app, vpMenu, {
   msg: "🤡🤡🤡🤡",
