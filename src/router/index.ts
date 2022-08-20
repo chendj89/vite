@@ -18,6 +18,8 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+// 用于重置路由
+let resetRoutes = router.getRoutes();
 router.addRoute({
   path: "/about",
   name: "about",
