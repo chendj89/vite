@@ -30,6 +30,7 @@ export default defineConfig({
     viteVueMacro({
       useImport: `import useImport from "@/utils/useImport";`,
       useDialog: `import useDialog from "@/utils/useDialog";`,
+      useToolNum: `import { useToolNum } from "@/utils/useTool";`,
     }),
     AutoImport({
       resolvers: [ElementPlusResolver()],

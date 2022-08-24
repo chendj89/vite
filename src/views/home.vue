@@ -1,5 +1,6 @@
 <script setup lang="ts">
 useImport("22");
+useToolNum("00");
 </script>
 <template>
   <div></div>
