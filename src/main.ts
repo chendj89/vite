@@ -11,8 +11,12 @@ import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 
 import scss from "@/scss/alias.module.scss";
 
+import useDirective from "@/utils/useDirective";
+
 const app = createApp(App);
+useDirective(app, { name: "飞翔的鱼" });
 app.use(ElementPlus, { size: "small" });
+
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component);
 }

@@ -5,6 +5,16 @@ const props = defineProps({
     default: () => "----",
   },
 });
+/**
+ * 按钮
+ */
+let size: number = 15;
+defineExpose({
+  /**
+   * @description 哈哈
+   */
+  size: size,
+});
 </script>
 <template>
   <div>

@@ -3,6 +3,8 @@ useImport("22");
 useToolNum("00");
 </script>
 <template>
-  <div></div>
+  <div>
+    <div v-num="{ color: 'white', text: 'hello!' }">123</div>
+  </div>
 </template>
 <style lang="scss" scoped></style>

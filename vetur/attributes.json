@@ -1,0 +1,6 @@
+{
+  "size": {
+    "type": "string",
+    "description": "大小"
+  }
+}
