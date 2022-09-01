@@ -20,12 +20,12 @@ app.use(ElementPlus, { size: "small" });
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component);
 }
-useInstall(app, vpBtn, {
-  msg: "👻👻👻👻",
-  ...scss,
-});
-useInstall(app, vpMenu, {
-  msg: "🤡🤡🤡🤡",
-});
+// useInstall(app, vpBtn, {
+//   msg: "👻👻👻👻",
+//   ...scss,
+// });
+// useInstall(app, vpMenu, {
+//   msg: "🤡🤡🤡🤡",
+// });
 
 app.use(router).mount("#app");

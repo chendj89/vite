@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "server": "http-server dist"
   },
   "dependencies": {
     "@babel/types": "^7.18.10",
